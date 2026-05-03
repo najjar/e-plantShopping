@@ -1,1 +1,2 @@
-# node-express-practice
+# My Awesome Project
+This project is called MyApp.# node-express-practice
