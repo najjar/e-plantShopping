@@ -1,20 +1,193 @@
-# Paradise Nursery
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-Welcome to **Paradise Nursery** — your online plant shop where nature meets home.
+body {
+  font-family: 'Georgia', serif;
+}
 
-## Project Name
-Paradise Nursery
+.landing-page {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 
-## Description
-Paradise Nursery is a React-based e-commerce web application for purchasing houseplants and garden plants online. Browse our curated collection, add plants to your cart, and bring nature into your home.
+.background-image {
+  min-height: 100vh;
+  background-image: url('https://images.unsplash.com/photo-1416879595882-3373a0480b5b?w=1600');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
 
-## Features
-- Landing page with company introduction
-- Plant product listing page
-- Shopping cart with add, remove, and quantity update functionality
-- About Us page with company details
+.background-image::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
 
-## Tech Stack
-- React (Vite)
-- Redux Toolkit
-- CSS3
+.landing-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: white;
+  padding: 40px;
+}
+
+.landing-content h1 {
+  font-size: 3.5rem;
+  margin-bottom: 16px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+}
+
+.landing-content p {
+  font-size: 1.3rem;
+  margin-bottom: 32px;
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+}
+
+.get-started-btn {
+  background-color: #2d6a4f;
+  color: white;
+  border: none;
+  padding: 16px 40px;
+  font-size: 1.1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.get-started-btn:hover {
+  background-color: #1b4332;
+}
+
+.navbar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  position: absolute;
+  top: 0;
+  z-index: 2;
+  background: rgba(0,0,0,0.3);
+}
+
+.navbar h2 {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.product-list {
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 24px;
+}
+
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: 16px;
+  background: white;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+.product-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cart-page {
+  padding: 40px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.cart-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  border-bottom: 1px solid #eee;
+  padding: 16px 0;
+}
+
+.cart-item img {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantity-controls button {
+  background: #2d6a4f;
+  color: white;
+  border: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.remove-btn {
+  background: #c0392b;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cart-total {
+  margin-top: 30px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #2d6a4f;
+  text-align: right;
+}
+
+.checkout-btn {
+  display: block;
+  margin: 20px 0 0 auto;
+  background: #2d6a4f;
+  color: white;
+  border: none;
+  padding: 14px 32px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.about-us-container {
+  padding: 40px;
+  max-width: 800px;
+  margin: 0 auto;
+}
