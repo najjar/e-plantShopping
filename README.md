@@ -1,2 +1,2 @@
 # My Awesome Project
-This project is called MyApp.# node-express-practice
+This project is called MyApp.# e-plantShopping
